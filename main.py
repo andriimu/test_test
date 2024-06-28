@@ -1,5 +1,5 @@
-def test_function():
-    '''
+
+'''
     Return type 
     1) Максимальне число: int
     2) Мінімальне число: int
@@ -17,24 +17,60 @@ def test_function():
     Arguments
     Список чисел: list of int
     '''
-    pass
+    
 
 
 def read_file(file_path):
+    """
+    Зчитує файл, який містить цілі числа, розділені пробілами, і повертає список цих чисел.
+    
+    Аргументи:
+        file_path (str): Шлях до файлу, який потрібно зчитати.
+        
+    Повертає:
+        List[int]: Список цілих чисел, зчитаних з файлу.
+    """
     with open(file_path, 'r') as file:
         numbers = list(map(int, file.read().split()))
     return numbers
 
 
 def find_max(numbers: list[int]) -> int:
+    """
+    Знаходить і повертає максимальне число зі списку цілих чисел.
+    
+    Аргументи:
+        numbers (list[int]): Список цілих чисел.
+        
+    Повертає:
+        int: Максимальне число зі списку.
+    """
     return max(numbers)
 
 
 def find_min(numbers: list[int]) -> int:
+    """
+    Знаходить і повертає мінімальне число зі списку цілих чисел.
+    
+    Аргументи:
+        numbers (list[int]): Список цілих чисел.
+        
+    Повертає:
+        int: Мінімальне число зі списку.
+    """
     return min(numbers)
 
 
 def average_value(numbers: list[int]) -> float|int:
+    """
+    Обчислює і повертає середнє значення списку цілих чисел.
+    
+    Аргументи:
+        numbers (list[int]): Список цілих чисел.
+        
+    Повертає:
+        float | int: Середнє значення списку. Якщо список порожній, повертає 0.
+    """
     total = 0
     count = 0
     for number in numbers:
@@ -48,6 +84,15 @@ def average_value(numbers: list[int]) -> float|int:
 
 
 def middle_value(numbers: list[int]) -> float:
+    """
+    Обчислює і повертає середнє значення списку цілих чисел.
+
+    Аргументи:
+        numbers (list[int]): Список цілих чисел.
+
+    Повертає:
+        float | int: Середнє значення списку. Якщо список порожній, повертає 0.
+    """
     n = len(numbers)
     if n == 0:
         return None
@@ -63,6 +108,15 @@ def middle_value(numbers: list[int]) -> float:
     
 
 def longest_arr(numbers: list[int]) -> list[int]:
+    """
+    Знаходить і повертає найдовшу підпослідовність зростаючих чисел у списку цілих чисел.
+
+    Аргументи:
+        numbers (list[int]): Список цілих чисел.
+
+    Повертає:
+        list[int]: Найдовша підпослідовність зростаючих чисел зі списку. Якщо список порожній, повертає порожній список.
+    """
     if not numbers:
         return []
 
@@ -90,6 +144,15 @@ def longest_arr(numbers: list[int]) -> list[int]:
 
 
 def longest_lower_arr(numbers: list[int]) -> list[int]:
+    """
+    Знаходить і повертає найдовшу підпослідовність спадних чисел у списку цілих чисел.
+
+    Аргументи:
+        numbers (list[int]): Список цілих чисел.
+
+    Повертає:
+        list[int]: Найдовша підпослідовність спадних чисел зі списку. Якщо список порожній, повертає порожній список.
+    """
     if not numbers:
         return []
 
