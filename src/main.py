@@ -1,10 +1,10 @@
 from utils import (
-read_file,  
-find_max, find_min, 
-middle_value, 
-average_value, 
-longest_arr, 
-longest_lower_arr
+    read_file,  
+    find_max, find_min, 
+    middle_value, 
+    average_value, 
+    longest_arr, 
+    longest_lower_arr,
 )
 
 
